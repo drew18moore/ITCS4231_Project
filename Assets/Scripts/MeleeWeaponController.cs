@@ -6,7 +6,10 @@ public class MeleeWeaponController : MonoBehaviour
 {
     public GameObject sword;
     bool canAttack = true;
-    public float AttackCooldown;
+    public float AttackCooldown = 0.5f;
+    public float range = 5f;
+
+    public Camera cam;
 
     private void Update()
     {
@@ -18,6 +21,11 @@ public class MeleeWeaponController : MonoBehaviour
 
     public void SwordAttack()
     {
+        RaycastHit hit;
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
+        {
+            Debug.Log(hit.transform.name);
+        }
         canAttack = false;
         Animator anim = sword.GetComponent<Animator>();
         anim.Play("SwordAttack");
