@@ -25,6 +25,16 @@ public class MeleeWeaponController : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
+            if (hit.transform.tag == "Enemy")
+            {
+                // TODO: Play enemy hit sound effect
+                hit.transform.GetComponent<EnemyHealth>().DamageEnemy(25);
+            }
+            else
+            {
+                // TODO: Play sword clash sound effect
+
+            }
         }
         canAttack = false;
         Animator anim = sword.GetComponent<Animator>();
