@@ -6,16 +6,34 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public CharacterController controller;
+
+    [Header("Movement")]
     public float speed = 12f;
+    public float walkSpeed;
+    public float sprintSpeed;
+
+    [Header("Jumping")]
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
+    [Header("Keybinds")]
+    public KeyCode sprintKey = KeyCode.LeftShift;
+
+    [Header("Ground Check")]
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     
     private Vector3 velocity;
     private bool isGrounded;
+
+    public MovementState state;
+    public enum MovementState
+    {
+        walking,
+        sprinting,
+        air
+    }
 
     // Update is called once per frame
     void Update()
@@ -34,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButton("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
@@ -43,5 +61,24 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
+        StateHandler();
+    }
+
+    void StateHandler()
+    {
+        if (isGrounded && Input.GetKey(sprintKey))
+        {
+            state = MovementState.sprinting;
+            speed = sprintSpeed;
+        }
+        else if (isGrounded)
+        {
+            state = MovementState.walking;
+            speed = walkSpeed;
+        }
+        else
+        {
+            state = MovementState.air;
+        }
     }
 }
