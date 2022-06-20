@@ -27,6 +27,7 @@ public class EnemyAI : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        
     }
 
     private void Update()
@@ -76,7 +77,9 @@ public class EnemyAI : MonoBehaviour
 
         visor.GetComponent<Renderer>().material = redVisorMaterial;
 
-        transform.LookAt(player);
+        var playerPos = player.position;
+        playerPos.y = transform.position.y;
+        transform.LookAt(playerPos);
 
         if (!alreadyAttacked)
         {

@@ -422,7 +422,6 @@ GameObject:
   - component: {fileID: 4767922270369880826}
   - component: {fileID: 4556200407458641025}
   - component: {fileID: 7367352718285933492}
-  - component: {fileID: 334064564298224154}
   m_Layer: 0
   m_Name: Visor
   m_TagString: Untagged
@@ -495,19 +494,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &334064564298224154
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5903828156596319522}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: -0.00000047683716}
 --- !u!1 &5934520156649804676
 GameObject:
   m_ObjectHideFlags: 0
