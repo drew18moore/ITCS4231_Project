@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 3f;
 
     [Header("Keybinds")]
+    public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
 
     [Header("Ground Check")]
@@ -52,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
-        if (Input.GetButton("Jump") && isGrounded)
+        if (Input.GetKey(jumpKey) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
