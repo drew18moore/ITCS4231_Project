@@ -191,6 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 2377882542501519984}
+  visor: {fileID: 5903828156596319522}
+  redVisorMaterial: {fileID: 2100000, guid: 5d835a35f62bfe041a20df34eca2f9a3, type: 2}
+  defaultMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
@@ -421,7 +424,7 @@ GameObject:
   - component: {fileID: 7367352718285933492}
   - component: {fileID: 334064564298224154}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Visor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

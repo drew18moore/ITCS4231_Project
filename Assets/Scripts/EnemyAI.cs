@@ -4,6 +4,9 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
+    public GameObject visor;
+    public Material redVisorMaterial;
+    public Material defaultMaterial;
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -49,6 +52,7 @@ public class EnemyAI : MonoBehaviour
 
     void Patroling()
     {
+        visor.GetComponent<Renderer>().material = defaultMaterial;
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet)
@@ -63,11 +67,14 @@ public class EnemyAI : MonoBehaviour
     void ChasePlayer()
     {
         agent.SetDestination(player.position);
+        visor.GetComponent<Renderer>().material = redVisorMaterial;
     }
 
     void AttackPlayer()
     {
         agent.SetDestination(transform.position);
+
+        visor.GetComponent<Renderer>().material = redVisorMaterial;
 
         transform.LookAt(player);
 
