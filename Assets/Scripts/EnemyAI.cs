@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     public float walkPointRange;
 
     // Attacking
+    public float attackDamage;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
 
@@ -84,7 +85,7 @@ public class EnemyAI : MonoBehaviour
         if (!alreadyAttacked)
         {
             // TODO: attack player
-
+            GameObject.Find("Player").GetComponent<playerHealth>().damagePlayer(25);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);

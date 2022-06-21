@@ -2703,7 +2703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2601011429768498605, guid: bafa772d162982f4ba7a8f3363d96cc3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.8343325
+      value: 1.4156675
       objectReference: {fileID: 0}
     - target: {fileID: 2601011429768498605, guid: bafa772d162982f4ba7a8f3363d96cc3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2711,7 +2711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2601011429768498605, guid: bafa772d162982f4ba7a8f3363d96cc3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.548579
+      value: 22.29858
       objectReference: {fileID: 0}
     - target: {fileID: 2601011429768498605, guid: bafa772d162982f4ba7a8f3363d96cc3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7731,6 +7731,7 @@ GameObject:
   - component: {fileID: 599534855}
   - component: {fileID: 599534854}
   - component: {fileID: 599534856}
+  - component: {fileID: 599534857}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -7801,6 +7802,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   state: 0
+--- !u!114 &599534857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599534853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5b771aa2820c444bed9e5d21055c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHP: 100
 --- !u!1 &603588569
 GameObject:
   m_ObjectHideFlags: 0
