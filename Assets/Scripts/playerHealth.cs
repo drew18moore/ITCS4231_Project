@@ -19,7 +19,7 @@ public class playerHealth : MonoBehaviour
     private void Update()
     {
         slider.value = CalculateHealth();
-        Debug.Log(playerHP);
+        // Debug.Log(playerHP);
 
         if (playerHP <= 0f)
         {
