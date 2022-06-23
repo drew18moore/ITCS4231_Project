@@ -11604,7 +11604,7 @@ GameObject:
   - component: {fileID: 430137263}
   - component: {fileID: 430137262}
   - component: {fileID: 430137261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hallway2SideHallwayFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33381,7 +33381,7 @@ GameObject:
   - component: {fileID: 1073777847}
   - component: {fileID: 1073777846}
   - component: {fileID: 1073777845}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AtriumFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42085,7 +42085,7 @@ GameObject:
   - component: {fileID: 1295973861}
   - component: {fileID: 1295973860}
   - component: {fileID: 1295973859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hallway2Floor2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66510,7 +66510,7 @@ GameObject:
   - component: {fileID: 2059407809}
   - component: {fileID: 2059407808}
   - component: {fileID: 2059407807}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hallway2SideHallwayRoomFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
