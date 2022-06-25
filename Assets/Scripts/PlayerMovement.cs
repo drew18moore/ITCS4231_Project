@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+
+    [Header("Sounds")]
+    public AudioSource footstepSound;
     
     private Vector3 velocity;
     private bool isGrounded;
@@ -48,6 +51,13 @@ public class PlayerMovement : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+
+        if (isGrounded && (x != 0 || z != 0) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) && !footstepSound.isPlaying)
+        {
+            footstepSound.volume = Random.Range(0.8f, 1);
+            footstepSound.pitch = Random.Range(0.8f, 1.1f);
+            footstepSound.Play();
+        }
 
         Vector3 move = transform.right * x + transform.forward * z;
 
