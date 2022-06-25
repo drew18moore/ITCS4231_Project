@@ -34,7 +34,8 @@ public class MeleeWeaponController : MonoBehaviour
             if (hit.transform.tag == "Enemy")
             {
                 // TODO: Play enemy hit sound effect
-                hit.transform.GetComponent<EnemyHealth>().DamageEnemy(25);
+                StartCoroutine(playSwordHitEnemySound());
+                StartCoroutine(dealDamage(hit));
             }
             else
             {
@@ -52,6 +53,18 @@ public class MeleeWeaponController : MonoBehaviour
     {
         yield return new WaitForSeconds(AttackCooldown);
         canAttack = true;
+    }
+
+    IEnumerator dealDamage(RaycastHit hit)
+    {
+        yield return new WaitForSeconds(0.25f);
+        hit.transform.GetComponent<EnemyHealth>().DamageEnemy(25);
+    }
+
+    IEnumerator playSwordHitEnemySound()
+    {
+        yield return new WaitForSeconds(.09f);
+        hitEnemy.Play();
     }
 
     IEnumerator playSwordHitOtherSound()
