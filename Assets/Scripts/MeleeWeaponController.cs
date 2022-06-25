@@ -9,6 +9,11 @@ public class MeleeWeaponController : MonoBehaviour
     public float AttackCooldown = 0.5f;
     public float range = 5f;
 
+    [Header("Sounds")]
+    public AudioSource swing;
+    public AudioSource hitEnemy;
+    public AudioSource hitOther;
+
     public Camera cam;
 
     private void Update()
@@ -21,6 +26,7 @@ public class MeleeWeaponController : MonoBehaviour
 
     public void SwordAttack()
     {
+        swing.Play();
         RaycastHit hit;
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
         {
@@ -33,7 +39,7 @@ public class MeleeWeaponController : MonoBehaviour
             else
             {
                 // TODO: Play sword clash sound effect
-
+                StartCoroutine(playSwordHitOtherSound());
             }
         }
         canAttack = false;
@@ -46,5 +52,11 @@ public class MeleeWeaponController : MonoBehaviour
     {
         yield return new WaitForSeconds(AttackCooldown);
         canAttack = true;
+    }
+
+    IEnumerator playSwordHitOtherSound()
+    {
+        yield return new WaitForSeconds(.09f);
+        hitOther.Play();
     }
 }
