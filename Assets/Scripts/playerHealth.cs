@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class playerHealth : MonoBehaviour
 {
@@ -23,7 +24,9 @@ public class playerHealth : MonoBehaviour
 
         if (playerHP <= 0f)
         {
-            Debug.Log("PLAYER DEAD");
+            SceneManager.LoadScene(3);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
