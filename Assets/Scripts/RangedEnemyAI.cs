@@ -19,6 +19,7 @@ public class RangedEnemyAI : MonoBehaviour
     public float attackDamage;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    public GameObject projectile;
 
     // States
     public float sightRange, attackRange;
@@ -84,7 +85,12 @@ public class RangedEnemyAI : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            GameObject.Find("Player").GetComponent<playerHealth>().damagePlayer(attackDamage);
+            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 5f, ForceMode.Impulse);
+
+
+            //GameObject.Find("Player").GetComponent<playerHealth>().damagePlayer(attackDamage);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
