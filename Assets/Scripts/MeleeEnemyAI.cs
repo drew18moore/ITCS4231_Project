@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAI : MonoBehaviour
+public class MeleeEnemyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
     public GameObject visor;
