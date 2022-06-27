@@ -108137,7 +108137,7 @@ MonoBehaviour:
   sword: {fileID: 880166682}
   AttackCooldown: 1
   range: 5
-  swing: {fileID: 1639261078}
+  swingSound: {fileID: 1639261078}
   hitEnemy: {fileID: 757427286}
   hitOther: {fileID: 1230880566}
   cam: {fileID: 963194227}
