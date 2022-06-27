@@ -206,7 +206,7 @@ MonoBehaviour:
   attackDamage: 15
   timeBetweenAttacks: 1
   sightRange: 20
-  attackRange: 4
+  attackRange: 2
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!1 &2809130378750087444

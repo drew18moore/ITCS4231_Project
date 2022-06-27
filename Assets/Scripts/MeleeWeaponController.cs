@@ -7,7 +7,7 @@ public class MeleeWeaponController : MonoBehaviour
     public GameObject sword;
     bool canAttack = true;
     public float AttackCooldown = 0.5f;
-    public float range = 5f;
+    public float range = 6f;
 
     [Header("Sounds")]
     public AudioSource swingSound;
