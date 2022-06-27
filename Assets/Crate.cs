@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Crate : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float hits = 2f;
 
-    // Update is called once per frame
-    void Update()
+    public void DamageCrate()
     {
-        
+        hits--;
+        if (hits <= 0) { Destroy(gameObject); }
     }
 }

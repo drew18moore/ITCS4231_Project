@@ -28406,7 +28406,7 @@ GameObject:
   - component: {fileID: 502388536}
   m_Layer: 0
   m_Name: Crate
-  m_TagString: Untagged
+  m_TagString: Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28449,9 +28449,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 502388533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61e06f3536cc8a143a1c44f4d2770511, type: 3}
+  m_Script: {fileID: 11500000, guid: fae360f4fcd353249a846f66e8d40ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hits: 2
 --- !u!1 &502548277
 GameObject:
   m_ObjectHideFlags: 0

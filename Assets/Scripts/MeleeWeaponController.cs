@@ -33,13 +33,16 @@ public class MeleeWeaponController : MonoBehaviour
             Debug.Log(hit.transform.name);
             if (hit.transform.tag == "Enemy")
             {
-                // TODO: Play enemy hit sound effect
                 StartCoroutine(playSwordHitEnemySound());
                 StartCoroutine(dealDamage(hit));
             }
+            else if (hit.transform.tag == "Crate")
+            {
+                StartCoroutine(playSwordHitOtherSound());
+                StartCoroutine(damageCrate(hit));
+            }
             else
             {
-                // TODO: Play sword clash sound effect
                 StartCoroutine(playSwordHitOtherSound());
             }
         }
@@ -59,6 +62,12 @@ public class MeleeWeaponController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         hit.transform.GetComponent<EnemyHealth>().DamageEnemy(25);
+    }
+
+    IEnumerator damageCrate(RaycastHit hit)
+    {
+        yield return new WaitForSeconds(0.25f);
+        hit.transform.GetComponent<Crate>().DamageCrate();
     }
 
     IEnumerator playSwordHitEnemySound()
