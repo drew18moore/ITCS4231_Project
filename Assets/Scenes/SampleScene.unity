@@ -14925,6 +14925,7 @@ GameObject:
   - component: {fileID: 265327697}
   - component: {fileID: 265327696}
   - component: {fileID: 265327701}
+  - component: {fileID: 265327702}
   m_Layer: 0
   m_Name: RangedEnemy
   m_TagString: Enemy
@@ -15051,6 +15052,37 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &265327702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265327695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f837ca8d4463dc4fa4ed544cdf36032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 265327701}
+  visor: {fileID: 915080254}
+  redVisorMaterial: {fileID: 2100000, guid: 5d835a35f62bfe041a20df34eca2f9a3, type: 2}
+  defaultMaterial: {fileID: -876546973899608171, guid: ef0ac8f580c95f842bed7ed5bf5f92d0, type: 3}
+  player: {fileID: 599534855}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  attackDamage: 15
+  timeBetweenAttacks: 1
+  sightRange: 20
+  attackRange: 2
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!1 &268203373
 GameObject:
   m_ObjectHideFlags: 0
