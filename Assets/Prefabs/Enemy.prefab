@@ -203,6 +203,7 @@ MonoBehaviour:
     m_Bits: 128
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
+  attackDamage: 15
   timeBetweenAttacks: 1
   sightRange: 20
   attackRange: 4

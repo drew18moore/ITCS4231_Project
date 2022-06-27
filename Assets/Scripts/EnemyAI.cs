@@ -84,8 +84,7 @@ public class EnemyAI : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            // TODO: attack player
-            GameObject.Find("Player").GetComponent<playerHealth>().damagePlayer(25);
+            GameObject.Find("Player").GetComponent<playerHealth>().damagePlayer(attackDamage);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
