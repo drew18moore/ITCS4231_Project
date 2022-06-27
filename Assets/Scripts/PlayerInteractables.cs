@@ -17,10 +17,15 @@ public class PlayerInteractables : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, interactRange) && hit.transform.tag == "ExitDoor")
         {
             Debug.Log("LOOKING AT DOOR");
-            if (Input.GetKey(interactKey))
+            if (Input.GetKey(interactKey) && hasKey)
             {
                 Destroy(hit.transform.gameObject);
             }
         }
+    }
+
+    public void CollectKey()
+    {
+        hasKey = true;
     }
 }
