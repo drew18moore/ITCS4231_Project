@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class playerHealth : MonoBehaviour
 {
     public float maxPlayerHP = 100f;
-    private float playerHP;
+    public float playerHP;
 
     public Slider slider;
 
@@ -33,6 +33,11 @@ public class playerHealth : MonoBehaviour
     public void damagePlayer(float amount)
     {
         playerHP -= amount;
+    }
+
+    public void healPlayer(float amount)
+    {
+        playerHP += amount;
     }
 
     float CalculateHealth()
