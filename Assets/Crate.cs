@@ -5,6 +5,7 @@ using UnityEngine;
 public class Crate : MonoBehaviour
 {
     public float hits = 2f;
+    public float chanceToDropMedkit = 0.5f;
     public GameObject medkitPrefab;
 
     public void DamageCrate()
@@ -12,7 +13,7 @@ public class Crate : MonoBehaviour
         hits--;
         if (hits <= 0) 
         {
-            if (Random.value > 0.5) { Instantiate(medkitPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity); }
+            if (Random.value > 1 - chanceToDropMedkit) { Instantiate(medkitPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity); }
             Destroy(gameObject);
         }
     }
