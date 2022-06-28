@@ -8,7 +8,8 @@ public class PlayerInteractables : MonoBehaviour
     public float interactRange = 4f;
     public Camera cam;
 
-    public GameObject chest;
+    private GameObject chest;
+    public GameObject Key;
 
     private bool hasKey = false;
 
@@ -36,6 +37,11 @@ public class PlayerInteractables : MonoBehaviour
                     Animator anim = chest.GetComponent<Animator>();
                     anim.Play("Open");
                     StartCoroutine(stopAnimation(anim));
+
+                    if (chest.GetComponent<KeyHandler>().haskey && !hasKey)
+                    {
+                        Instantiate(Key, chest.transform.position + chest.transform.up * 1f, chest.transform.rotation);
+                    }
                 }
             }
         }
