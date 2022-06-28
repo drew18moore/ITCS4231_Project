@@ -6,14 +6,11 @@ public class Projectile : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name != "RangedEnemy")
+        if (other.name == "Player")
         {
-            if (other.name == "Player")
-            {
-                other.GetComponent<playerHealth>().damagePlayer(15);   
-            }
-            Destroy(gameObject);
+            other.GetComponent<playerHealth>().damagePlayer(15);   
         }
+        Destroy(gameObject);
         
     }
 }
