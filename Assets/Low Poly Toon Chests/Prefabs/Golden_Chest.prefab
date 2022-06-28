@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: 426404}
   - component: {fileID: 9529244}
   - component: {fileID: -561957425838544430}
+  - component: {fileID: 2119832102415621491}
   m_Layer: 0
   m_Name: Golden_Chest
   m_TagString: Chest
@@ -219,6 +220,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2119832102415621491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7218bfc51c3e6cb48a5a7d6ef1bc609f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &160378
 GameObject:
   m_ObjectHideFlags: 0
