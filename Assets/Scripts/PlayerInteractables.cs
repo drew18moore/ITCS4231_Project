@@ -10,6 +10,7 @@ public class PlayerInteractables : MonoBehaviour
 
     private GameObject chest;
     public GameObject Key;
+    public GameObject KeyImg;
 
     private bool hasKey = false;
 
@@ -51,6 +52,7 @@ public class PlayerInteractables : MonoBehaviour
     public void CollectKey()
     {
         hasKey = true;
+        KeyImg.SetActive(true);
     }
 
     IEnumerator stopAnimation(Animator anim)
