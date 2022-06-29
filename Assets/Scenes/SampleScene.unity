@@ -32180,7 +32180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5b771aa2820c444bed9e5d21055c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlayerHP: 1000
+  maxPlayerHP: 500
   playerHP: 0
   slider: {fileID: 491782922}
 --- !u!114 &599534858
