@@ -1,4 +1,4 @@
-# Game Title
+# Dungeon Escape
 ## Unity Project For ITCS-4231
 
 You are trapped in a dungeon surrounded by enemies. You must find the exit gate, however, the gate is locked. The key is hidden somewhere in one of the many chests around the level. Find it to escape.
