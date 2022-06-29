@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48ea10d39de82b4ebc75d718b45747c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  enemyHealth: 100
+  maxHealth: 75
+  enemyHealth: 75
   healthBarUI: {fileID: 6498941635856857298}
   slider: {fileID: 2633888935409725738}
 --- !u!195 &2377882542501519984

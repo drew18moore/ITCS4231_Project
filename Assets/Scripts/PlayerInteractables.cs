@@ -12,7 +12,7 @@ public class PlayerInteractables : MonoBehaviour
     public GameObject Key;
     public GameObject KeyImg;
 
-    private bool hasKey = false;
+    public bool hasKey = false;
 
     // Update is called once per frame
     void Update()
