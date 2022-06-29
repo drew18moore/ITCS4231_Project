@@ -464,7 +464,7 @@ MonoBehaviour:
   agent: {fileID: 8397214907140310103}
   visor: {fileID: 8397214906221139004}
   redVisorMaterial: {fileID: 2100000, guid: 5d835a35f62bfe041a20df34eca2f9a3, type: 2}
-  defaultMaterial: {fileID: -876546973899608171, guid: ef0ac8f580c95f842bed7ed5bf5f92d0, type: 3}
+  defaultMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
